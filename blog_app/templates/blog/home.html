@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+</style>
+{% for message in messages %}
+{{ message }}
+{% endfor %}
+<div class="row" style="width:100%;">
+    <div class="leftcolumn">
+        {% for post in posts %}
+        <div class="card">
+            <h2 align="center"><a href="{% url 'detail_blog_view' post.id %}">{{post.title|title}}</a></h2>
+            <h5 align="right">Created by : <b>{{post.author.username}}</b></h5>
+            <h5 align="right">Published at : <b>{{ post.pub_date }}</b></h5>
+            <p>{{post.content}}</p>
+            <div>
+                <a href="{% url 'likes_view' post.id %}" style="margin-left:auto;">Like({{post.no_of_likes}})</a>
+                <a href="{% url 'dislikes_view' post.id %}" style="margin-left:50px;">Dislike({{post.no_of_dislikes}})</a>
+                <a href="#" style="margin-left:50px;" onclick="return false">Comment({{post.no_of_comments}})</a>
+            </div>
+
+        </div>
+        {% endfor %}
+
+
+    </div>
+
+</div>
+{% endblock %}

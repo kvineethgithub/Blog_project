@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form action="" method="post">{% csrf_token %}
+    {% for msg in messages %}
+    {{ msg}}
+    {% endfor%}
+    <table style="margin-top:100px;margin-left:400px;">
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" name="first_name"></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" name="last_name"></td>
+        </tr>
+        <tr>
+            <td>User Name:</td>
+            <td><input type="text" name="user_name" required></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password1" required></td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td><input type="password" name="password2" required></td>
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn btn-success" name="Sign up"></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

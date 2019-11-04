@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% for msg in messages%}
+{{ msg }}
+{% endfor %}
+<form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <table style="margin-left:100px;margin-top:50px;">
+        <tr>
+            <td style="padding:9px;">Blog Title:</td>
+            <td style="padding:9px;"><input type="text" name="title" value="{{each_post.title}}" required size="70px">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:9px;">Blog Content:</td>
+            <td style="padding:9px;"><textarea name="content" rows="5" cols="73"
+                                               required>{{each_post.content}}</textarea></td>
+        </tr>
+        <tr>
+            <td style="padding:20px;"><input type="submit" value="EDIT POST" class="btn btn-success"></td>
+        </tr>
+    </table>
+
+
+</form>
+{% endblock %}

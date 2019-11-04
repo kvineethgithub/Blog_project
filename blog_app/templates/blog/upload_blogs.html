@@ -1,0 +1,133 @@
+{% extends 'layout.html' %}
+{% block content %}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+<div class="row" style="width:100%;">
+    <div class="leftcolumn">
+        {% for each_post in posts %}
+        <div class="card">
+            <h2 align="center">{{each_post.title|title}}</a></h2>
+            <h5 align="right">Created by : <b>{{each_post.author.username}}</b></h5>
+            <h5 align="right">Published at : <b>{{ each_post.pub_date }}</b></h5>
+            <p>{{each_post.content}}</p>
+            <div>
+                <a href="{% url 'liked_users' each_post.id%}" style="margin-left:auto;">Like({{ each_post.no_of_likes }})</a>
+                <a href="{% url 'disliked_users' each_post.id%}" style="margin-left:50px;">Dislike({{ each_post.no_of_dislikes }})</a>
+                <a href="{% url 'comments_view' each_post.id%}" style="margin-left:50px;">Comment({{ each_post.no_of_comments }})</a>
+                <a href="{% url 'delete_blog' each_post.id %}" style="margin-left:200px;">Delete</a>
+                <a href="{% url 'edit_blog' each_post.id %}" style="margin-left:200px;">Edit</a>
+            </div>
+
+            {% if users is None %}
+            {% else %}
+            <div class="card">
+                {% for i in users %}
+                <h5>{{i.user}}</h5>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if comments is None %}
+            {% else %}
+            <div class="card">
+                {% for i in comments %}
+                <h5>{{i.user}}:{{i.comment}}</h5>
+                {% endfor %}
+                <form method="POST" action="{% url 'comments_view' each_post.id %}">
+                    {% csrf_token %}
+                    <input type="text" name="comment" placeholder="Type your comment here">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            {% endif %}
+
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock %}
