@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="747eddb3-6915-4ebf-a5ac-f7858969977d" name="Default Changelist" comment="" />
+    <list default="true" id="747eddb3-6915-4ebf-a5ac-f7858969977d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/blog_app/templates/blog/detail_blog.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
-              <caret line="109" column="25" lean-forward="true" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+              <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -114,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/blog_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1592">
-              <caret line="163" column="56" lean-forward="true" selection-start-line="163" selection-start-column="56" selection-end-line="163" selection-end-column="56" />
+              <caret line="163" column="56" selection-start-line="163" selection-start-column="56" selection-end-line="163" selection-end-column="56" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -126,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="47">
-              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -434,7 +436,7 @@
     <entry file="file://$PROJECT_DIR$/blog_app/templates/blog/detail_blog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
-          <caret line="109" column="25" lean-forward="true" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+          <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -459,7 +461,7 @@
     <entry file="file://$PROJECT_DIR$/blog_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1592">
-          <caret line="163" column="56" lean-forward="true" selection-start-line="163" selection-start-column="56" selection-end-line="163" selection-end-column="56" />
+          <caret line="163" column="56" selection-start-line="163" selection-start-column="56" selection-end-line="163" selection-end-column="56" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -469,7 +471,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
