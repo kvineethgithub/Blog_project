@@ -14,8 +14,8 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         super(Post, self).save(*args, **kwargs)
 
-    def __unicode__(self):
-        return self.id
+    def __str__(self):
+        return self.title
 
 
 class Like(models.Model):

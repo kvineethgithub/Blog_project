@@ -7,3 +7,18 @@ local_settings.py
 db.sqlite3
 /media
 /static
+# Python
+*.pyc
+*~
+__pycache__
+
+# Env
+.env
+myvenv/
+venv/
+
+blog_env/
+# Visual Studio
+.vscode/
+.history/
+*.code-workspace
